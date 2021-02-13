@@ -13,11 +13,14 @@ local speed = 5
 local bricks = LM.get_level().bricks
 local brick_num = LM.get_level().brick_num
 local state = "menu"
- 
+local background
+local game_background
 function love.load()
     love.window.setTitle ("BRICK BREAKER")
     Key:hook_love_events()
     love.graphics.setFont(love.graphics.newFont(24))
+    background = love.graphics.newImage("/assets/forest.png")
+    game_background = love.graphics.newImage("/assets/sky.jpg")
 
 end
 
@@ -77,6 +80,13 @@ function love.mousereleased(x,y,button)
 end
 function love.draw()
     --checking which state is active
+    if state == "game" or state == "gameover" or state == "win" then 
+        love.graphics.setColor(1,1,1)
+        love.graphics.draw(game_background)
+    else
+        love.graphics.setColor(1, 1, 1)
+        love.graphics.draw(background)
+    end
     if state == "win" then
         Win:draw()
     elseif state == "gameover" then

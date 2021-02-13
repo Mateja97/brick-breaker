@@ -14,9 +14,10 @@ function Player:new(w,h)
     self.life = 3
 end
 
-function Player:draw()  
-    love.graphics.setColor(1, 1, 1)
+function Player:draw()
+    love.graphics.setColor(0,48,48)
     love.graphics.rectangle("fill", self.x, self.y,self.width,self.height)
+    love.graphics.setColor(1,1,1)
     love.graphics.draw(heart,5,5,0,0.02,0.02)
     love.graphics.print(" : "..self.life, 35,10)
 end

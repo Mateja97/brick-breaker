@@ -6,7 +6,9 @@ local level = Level(1)
 function LM:draw()
     for i=0,10,1
     do
-        love.graphics.rectangle("line",100+ 300*(i%4),60 + 80*math.floor(i/4),200,40)
+        love.graphics.setColor(1, 1, 1)
+        love.graphics.rectangle("fill",100+ 300*(i%4),60 + 80*math.floor(i/4),200,40)
+        love.graphics.setColor(0,0,0)
         love.graphics.print("level "..i+1,160+ 300*(i%4),65 + 80*math.floor(i/ 4))
         levels[i] = Level(i+1,100+ 300*(i%4),60 + 80*math.floor(i/ 4))
     end

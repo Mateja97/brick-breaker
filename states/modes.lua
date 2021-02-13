@@ -1,11 +1,17 @@
 local modes = {} 
 local mode = "Easy"
 function modes:draw()
-    love.graphics.rectangle("line", love.graphics.getWidth()*0.5-100, love.graphics.getHeight()*0.4, 200,40)
+    love.graphics.setColor(1,1,1)
+    love.graphics.rectangle("fill", love.graphics.getWidth()*0.5-100, love.graphics.getHeight()*0.4, 200,40)
+    love.graphics.setColor(0,0,0)
     love.graphics.print("Easy", love.graphics.getWidth()*0.5-30, love.graphics.getHeight()*0.4 + 5)
-    love.graphics.rectangle("line", love.graphics.getWidth()*0.5-100, love.graphics.getHeight()*0.4 + 60, 200,40)
+    love.graphics.setColor(1,1,1)
+    love.graphics.rectangle("fill", love.graphics.getWidth()*0.5-100, love.graphics.getHeight()*0.4 + 60, 200,40)
+    love.graphics.setColor(0,0,0)
     love.graphics.print("Medium", love.graphics.getWidth()*0.5-30, love.graphics.getHeight()*0.4 + 65)
-    love.graphics.rectangle("line", love.graphics.getWidth()*0.5-100, love.graphics.getHeight()*0.4 + 120, 200,40)
+    love.graphics.setColor(1,1,1)
+    love.graphics.rectangle("fill", love.graphics.getWidth()*0.5-100, love.graphics.getHeight()*0.4 + 120, 200,40)
+    love.graphics.setColor(0,0,0)
     love.graphics.print("Hard", love.graphics.getWidth()*0.5-30, love.graphics.getHeight()*0.4 + 125)
 end
 function modes:get_mode()
