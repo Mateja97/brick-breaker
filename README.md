@@ -28,6 +28,7 @@ Controls: <br />
 "Esc" - return to the main menu <br /> 
  <br /> 
 Player has a 3 life, life is lost if ball passed main tile on y axis <br /> 
+Brick is destroyed after 3rd hit. <br />
 Every brick that is destroyed have a chance to have a bonus  <br />  <br /> 
 
 Bonuses: <br /> 
