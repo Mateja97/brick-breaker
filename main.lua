@@ -85,7 +85,9 @@ function love.draw()
         love.graphics.draw(game_background)
     else
         love.graphics.setColor(1, 1, 1)
-        love.graphics.draw(background)
+        local sx = love.graphics.getWidth() / background:getWidth()
+        local sy = love.graphics.getHeight() / background:getHeight()
+        love.graphics.draw(background,0,0,0,sx,sy)
     end
     if state == "win" then
         Win:draw()
